@@ -1,52 +1,50 @@
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
-
+import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import HomeScreen from './pages/HomeScreen';
+import SettingsScreen from './pages/SettingsScreen';
 export default function App() {
+  const Tab = createBottomTabNavigator();
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Bem-Vindo a Academia </Text>
-
-      <View style={styles.agruparInputs}>
-        
-        <TextInput style={styles.inputs} keyboardType="email-address" placeholderTextColor={'gray'} placeholder='Email' />
-
-        <TextInput style={styles.inputs} placeholder='Senha' placeholderTextColor={'gray'} secureTextEntry={true} />
-
-        <TextInput style={styles.inputs} placeholder='Confirmar Senha' placeholderTextColor={'gray'} secureTextEntry={true}  />
-        <Text style={styles.cadastro}>Não Possui Conta? Cadastre-se </Text>
-      <Button style={styles.botao} color={'#58a4b0'} title='Entrar' />
-      </View>
-     
-    </View>
+    <NavigationContainer style={styles.container}>
+    
+        <Tab.Navigator >
+        <Tab.Screen name="Home"  component={HomeScreen} />
+      <Tab.Screen name="Settings" component={SettingsScreen} />
+        </Tab.Navigator>
+        </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#373f51',
+    backgroundColor: '#25242c',
 
     alignItems: 'center',
     justifyContent: 'center',
-    gap : 40
+    gap: 40
   },
   text: {
     color: '#D8DBE2',
     fontSize: 30,
+    
   },
   cadastro: {
-    color: '#D8DBE2',
+    color: '#e59638',
     fontSize: 20,
   },
   inputs: {
-    borderColor: "white",
-    width: "100%",
-    borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
-    color: 'white',
+
+    borderColor: "#e59638",
+    width: "90%",
+    borderWidth: 2,
+    borderRadius: 30,
+    padding: 15,
+    color: '#e59638',
     fontSize: 20,
-    textAlign : 'center',
+    paddingLeft: 20,
   },
   agruparInputs: {
 
@@ -54,9 +52,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     textAlign: 'center',
     width: '90%',
-    height: 300,
-    gap : 30
+    height: '60%',
+    gap: 30,
+    borderRadius: 10,
 
+  }, appButtonContainer: {
+    elevation: 8,
+    backgroundColor: "#e59638",
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    width : 200,
+  },
+  appButtonText: {
+    fontSize: 20,
+    color: "#fff",
+    fontWeight: "bold",
+    alignSelf: "center",
+    textTransform: "uppercase"
   },
 
 });
