@@ -18,5 +18,6 @@ class VerifyCsrfToken extends Middleware
         'http://localhost:8000/janta',
         'http://localhost:8000/almoco',
         'http://localhost:8000/test-api',
+        'http://localhost:8000/criar-exercicios',
     ];
 }

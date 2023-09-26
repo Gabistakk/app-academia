@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ChatController;
 
+use App\Http\Controllers\ExercicioController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +32,14 @@ Route::post('/janta', [ChatController::class, 'getJanta']);
 
 Route::post('/cafe-da-tarde', [ChatController::class, 'getCafeDaTarde']);
 
+//EXERCICIOS
+
+Route::post('/criar-exercicios', [ExercicioController::class, 'createExercicios']);
+
+
+
 Route::post('/test-api', [ChatController::class, 'testApi']);
+
+
 
 
