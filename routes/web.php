@@ -20,3 +20,15 @@ Route::get('/', function () {
 });
 
 Route::post('/chat', [ChatController::class, 'chat']);
+
+Route::post('/cafe-da-manha', [ChatController::class, 'getCafeDaManha']);
+
+Route::post('/almoco', [ChatController::class, 'getAlmoco']);
+
+Route::post('/janta', [ChatController::class, 'getJanta']);
+
+Route::post('/cafe-da-tarde', [ChatController::class, 'getCafeDaTarde']);
+
+Route::post('/test-api', [ChatController::class, 'testApi']);
+
+
