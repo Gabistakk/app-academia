@@ -1,21 +1,15 @@
 import { useState } from "react";
 
 function App() {
-  const [food1, setFood1] = useState("");
   const [food2, setFood2] = useState("");
-  const [food3, setFood3] = useState("");
 
-  const handleFood1Change = (e) => {
-    setFood1(e.target.value);
-  };
+
 
   const handleFood2Change = (e) => {
     setFood2(e.target.value);
   };
 
-  const handleFood3Change = (e) => {
-    setFood3(e.target.value);
-  };
+
 
   return (
     <div className="w-screen h-screen bg-fundo2 overflow-hidden flex justify-center items-center flex-col">
