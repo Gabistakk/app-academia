@@ -12,17 +12,13 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        'http://localhost:8000/chat',
-        'http://localhost:8000/cafe-da-manha',
-        'http://localhost:8000/cafe-da-tarde',
-        'http://localhost:8000/janta',
-        'http://localhost:8000/almoco',
-        'http://localhost:8000/test-api',
-        'http://localhost:8000/criar-exercicios',
-        'http://localhost:8000/user',
-        'http://localhost:8000/user/id',
-        'http://localhost:8000/user/edit',
-        'http://localhost:8000/exercicios',
-        'http://localhost:8000/exercicios/id',
+        'http://10.112.240.187:8000/chat',
+        'http://10.112.240.187:8000/cafe-da-manha',
+        'http://10.112.240.187:8000/cafe-da-tarde',
+        'http://10.112.240.187:8000/janta',
+        'http://10.112.240.187:8000/almoco',
+        'http://10.112.240.187:8000/test-api',
+        'http://10.112.240.187:8000/criar-exercicios',
+        'http://10.112.240.187:8000/user',
     ];
 }

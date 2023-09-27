@@ -49,7 +49,7 @@ Route::get('/user', [UserController::class, 'user']);
 
 Route::get('/user/id', [UserController::class, 'userId']);
 
-Route::put('/user/edit', [UserController::class, 'edit']);
+Route::put('/user', [UserController::class, 'edit']);
 
 
 
