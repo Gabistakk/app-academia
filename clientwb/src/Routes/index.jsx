@@ -6,6 +6,7 @@ import Metas from '../pages/Metas'
 import Dietas from '../pages/Dietas'
 import Resultados from '../pages/Resultados'
 import Registro from '../pages/Registro'
+import Login from '../pages/Login'
 
 export default function MinhasRotas() {
   return (
@@ -14,6 +15,7 @@ export default function MinhasRotas() {
     <Routes> 
 
       <Route path='/' element={<Registro/>}/>
+      <Route path='/login' element={<Login/>}/>
       <Route path='/exercicios' element={<Exercicios/>}/>
       <Route path='/Meta' element={<Metas/>}/>
       <Route path='/dietas' element={<Dietas/>}/>

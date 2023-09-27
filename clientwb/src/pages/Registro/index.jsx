@@ -14,7 +14,7 @@ export default function Registro() {
                 E-Mail:
               </label>
             </div>
-            <div className="w-[40vh] border-fundo1 border-[1px] flex items-center justify-center h-[50%] rounded-full transition shadow-white shadow-lg hover:shadow-lg hover:shadow-rose-400 ">
+            <div className="w-[40vh] border-fundo1 border-[1px] flex items-center justify-center h-[50%] rounded-full transition shadow-white shadow-lg hover:shadow-lg  ">
               <input
                 type="text"
                 name="email"
@@ -30,7 +30,7 @@ export default function Registro() {
                 E-Mail:
               </label>
             </div>
-            <div className="w-[40vh] border-fundo1 border-[1px] flex items-center justify-center h-[50%] rounded-full transition shadow-white shadow-lg hover:shadow-lg hover:shadow-rose-400 ">
+            <div className="w-[40vh] border-fundo1 border-[1px] flex items-center justify-center h-[50%] rounded-full transition shadow-white shadow-lg hover:shadow-lg  ">
               <input
                 type="text"
                 name="email"
@@ -46,7 +46,7 @@ export default function Registro() {
                 E-Mail:
               </label>
             </div>
-            <div className="w-[40vh] border-fundo1 border-[1px] flex items-center justify-center h-[50%] rounded-full transition shadow-white shadow-lg hover:shadow-lg hover:shadow-rose-400 ">
+            <div className="w-[40vh] border-fundo1 border-[1px] flex items-center justify-center h-[50%] rounded-full transition shadow-white shadow-lg hover:shadow-lg  ">
               <input
                 type="text"
                 name="email"
@@ -62,7 +62,7 @@ export default function Registro() {
                 E-Mail:
               </label>
             </div>
-            <div className="w-[40vh] border-fundo1 border-[1px] flex items-center justify-center h-[50%] rounded-full transition shadow-white shadow-lg hover:shadow-lg hover:shadow-rose-400 ">
+            <div className="w-[40vh] border-fundo1 border-[1px] flex items-center justify-center h-[50%] rounded-full transition shadow-white shadow-lg hover:shadow-lg  ">
               <input
                 type="text"
                 name="email"
