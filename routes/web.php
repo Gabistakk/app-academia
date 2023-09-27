@@ -6,6 +6,9 @@ use App\Http\Controllers\ChatController;
 
 use App\Http\Controllers\ExercicioController;
 
+use App\Http\Controllers\UserController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +42,17 @@ Route::post('/criar-exercicios', [ExercicioController::class, 'createExercicios'
 
 
 Route::post('/test-api', [ChatController::class, 'testApi']);
+
+Route::post('/user', [UserController::class, 'create']);
+
+Route::get('/user', [UserController::class, 'user']);
+
+Route::get('/user/id', [UserController::class, 'userId']);
+
+Route::put('/user/edit', [UserController::class, 'edit']);
+
+
+
 
 
 
