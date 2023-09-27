@@ -47,7 +47,7 @@ Route::post('/user', [UserController::class, 'create']);
 
 Route::get('/user', [UserController::class, 'user']);
 
-Route::get('/user', [UserController::class, 'userId']);
+Route::get('/user/id', [UserController::class, 'userId']);
 
 Route::put('/user', [UserController::class, 'edit']);
 
