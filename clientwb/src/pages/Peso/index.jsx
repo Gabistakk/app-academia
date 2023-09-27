@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Peso() {
     const [peso, setPeso] = useState(null);
@@ -34,12 +35,14 @@ export default function Peso() {
            
           </section>
           <section className="botaSection ">
+            <Link to={'/Meta'}>
             <button
               type="submit"
               className="text-white border-white rounded-full border-[1px] h-[4vh] w-[20vh] transition  hover:bg-fundo2"
             >
               Enviar
             </button>
+            </Link>
           </section>
         </div>
       </div>

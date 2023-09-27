@@ -2,12 +2,22 @@ import { useState } from "react";
 
 function App() {
   const [food2, setFood2] = useState("");
+  const [foodsList, setFoodsList] = useState([]);
 
 
 
   const handleFood2Change = (e) => {
     setFood2(e.target.value);
   };
+
+
+  const handleAddFood = () => {
+    if (food2.trim() !== "") {
+      setFoodsList([...foodsList, food2]); 
+      setFood2(""); 
+    }
+  };
+
 
 
 
@@ -37,8 +47,19 @@ function App() {
           <button
             type="submit"
             className="text-white border-white rounded-full border-[1px] h-[4vh] w-[20vh] transition  hover:bg-fundo2"
+            onClick={handleAddFood}
           >
             Adicionar
+          </button>
+
+          
+          
+          <button
+            type="submit"
+            className="text-white border-white rounded-full border-[1px] h-[4vh] w-[20vh] transition  hover:bg-fundo2"
+            onClick={handleAddFood}
+          >
+            Proximo
           </button>
         </section>
       </div>

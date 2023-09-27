@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Registro() {
 
@@ -80,12 +81,15 @@ export default function Registro() {
           </div>
 
           
+          <Link to={'/peso'}>
           <button
             type="submit"
             className="border-fundo2 text-white rounded-full border-[1px] h-[4vh] w-[20vh] transition hover:text-white hover:bg-fundo2"
           >
+            
             Registrar
           </button>
+          </Link>
         </form>
       </div>
     </div>

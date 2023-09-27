@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Metas() {
-  const kilosOptions = Array.from({ length: 100 }, (_, valor) => valor + 1);
+   
+  const navigator = useNavigate()
 
   const [buttoGanharFixed, setButtonGanharFixed] = useState(null);
   const [buttoPerderFixed, setButtonPerderFixed] = useState(null);
@@ -13,7 +16,12 @@ export default function Metas() {
     name === "Perder"
       ? setButtonPerderFixed(true)
       : setButtonPerderFixed(false);
+
+      navigator('/dietas')
   };
+
+  
+  
 
   return (
     <div className="w-[100%] h-[100vh] bg-fundo2 overflow-hidden flex justify-center items-center flex-col">
@@ -24,6 +32,7 @@ export default function Metas() {
           <button onClick={()=>{handleButton('Ganhar')}} className={`w-[30%] h-[30%] text-xl bg-fundo2 rounded-xl shadow-lg shadow-white transition hover:bg-transparent border-fundo2 border-[2px] text-white ${buttoGanharFixed ? 'bg-transparent border-fundo2 border-[2px] text-white' : ''}`}>Ganhar Peso</button>
           <button onClick={()=>{handleButton('Perder')}} className={`w-[30%] h-[30%] text-xl bg-fundo2 rounded-xl shadow-lg shadow-white transition hover:bg-transparent border-fundo2 border-[2px] text-white ${buttoPerderFixed ? 'bg-transparent border-fundo2 border-[2px] text-white' : ''}`}>Perder Peso</button>
       </div>
+
     </div>
   );
 }
