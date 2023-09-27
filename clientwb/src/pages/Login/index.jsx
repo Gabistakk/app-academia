@@ -19,7 +19,7 @@ export default function Login() {
                   type="text"
                   name="email"
                   placeholder="name@example.com.."
-                  className="w-[93%] rounded-full h-[60%] border-white outline-0 bg-transparent p-3 placeholder:text-white"
+                  className="w-[93%] rounded-full h-[60%]   outline-0 bg-transparent p-3 placeholder:text-white"
                 />
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function Login() {
               type="submit"
               className="border-fundo1 rounded-full border-[1px] h-[4vh] w-[20vh] transition hover:text-white hover:bg-rose-500"
             >
-              Registrar
+              Logar
             </button>
           </section>
         </form>
