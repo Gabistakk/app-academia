@@ -4,26 +4,24 @@ import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 
-export default function SettingsScreen() {
+export default function Dietas() {
 
     return (
         <View style={styles.container}>
 
-            <Text style={styles.text}>Criar Conta </Text>
+            <Text style={styles.text}>Bem-Vindo a Academia </Text>
 
             <View style={styles.agruparInputs}>
-                
-            <TextInput style={styles.inputs}  placeholderTextColor={'#e59638'} placeholder='Usuario' />
+
                 <TextInput style={styles.inputs} keyboardType="email-address" placeholderTextColor={'#e59638'} placeholder='Email' />
                 <TextInput style={styles.inputs} placeholder='Senha' placeholderTextColor={'#e59638'} secureTextEntry={true} />
-                <TextInput style={styles.inputs} keyboardType="number-pad"placeholder='Telefone' placeholderTextColor={'#e59638'} />
-                
-            
-                
+                <TextInput style={styles.inputs} placeholder='Confirmar Senha' placeholderTextColor={'#e59638'} secureTextEntry={true} />
+
+                <Text style={styles.cadastro}>Não Possui Conta? Cadastre-se </Text>
+
                 <TouchableOpacity style={styles.appButtonContainer}>
-                    <Text style={styles.appButtonText}>Cadastrar</Text>
+                    <Text style={styles.appButtonText}>Entrar</Text>
                 </TouchableOpacity>
-                
             </View>
         </View>
     );
@@ -40,7 +38,6 @@ const styles = StyleSheet.create({
     text: {
         color: '#D8DBE2',
         fontSize: 30,
-
     },
     cadastro: {
         color: '#e59638',
