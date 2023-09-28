@@ -19,25 +19,24 @@ export default function Registro() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://10.112.240.187:8000/user", {
+            const response = await fetch("http://localhost:8000/user", {
                 method: "POST",
-                mode: "no-cors",
                 headers: {
                     "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "*",
                 },
                 body: JSON.stringify(formaData),
             });
 
             const responseData = await response.json();
             console.log(responseData);
-            setDataLogin({
+            setFormdata({
                 email: "",
                 senha: "",
                 nome: "",
             });
+
         } catch (error) {
-            console.log(error);
+            alert(error);
         }
     };
 
@@ -63,7 +62,7 @@ export default function Registro() {
                                 name="nome"
                                 value={formaData.nome}
                                 onChange={handleInputChange}
-                                placeholder="name.."
+                                placeholder="nome..."
                                 className="w-[93%] text-white rounded-full h-[60%] border-white outline-0 bg-transparent p-3 placeholder:text-white"
                             />
                         </div>
@@ -81,7 +80,7 @@ export default function Registro() {
                                 name="email"
                                 value={formaData.email}
                                 onChange={handleInputChange}
-                                placeholder="name@example.com.."
+                                placeholder="exemplo@gmail.com"
                                 className="w-[93%] text-white  rounded-full h-[60%] border-white outline-0 bg-transparent p-3 placeholder:text-white"
                             />
                         </div>
@@ -99,7 +98,7 @@ export default function Registro() {
                                 name="senha"
                                 value={formaData.senha}
                                 onChange={handleInputChange}
-                                placeholder="password.."
+                                placeholder="senha..."
                                 className="w-[93%] text-white  rounded-full h-[60%] border-white outline-0 bg-transparent p-3 placeholder:text-white"
                             />
                         </div>
