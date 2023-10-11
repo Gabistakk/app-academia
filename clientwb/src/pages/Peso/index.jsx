@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { useDataUser } from '../../shared/context/DataUser';
 
 export default function Peso() {
     const [peso, setPeso] = useState(null);
-
+    const { dataUser, setDataUser } = useDataUser();
 
 
     const handlePesoChange = (e) => {
         setPeso(e.target.value);
     };
-  
-  
-  
+
+
+
     return (
       <div className="w-screen h-screen bg-fundo2 overflow-hidden flex justify-center items-center flex-col">
         <div className=" w-[100%] h-[10%]">
@@ -22,7 +23,7 @@ export default function Peso() {
             <h1 className="text-white text-3xl">Digite quantos kilos você pesa</h1>
           </section>
           <section className="input w-[100%] flex  justify-center items-center">
-            
+
             <div className="w-1/3">
               <input
                 type="text"
@@ -32,10 +33,10 @@ export default function Peso() {
                 onChange={handlePesoChange}
               />
             </div>
-           
+
           </section>
           <section className="botaSection ">
-            <Link to={'/Meta'}>
+            <Link to={'/dietas'}>
             <button
               type="submit"
               className="text-white border-white rounded-full border-[1px] h-[4vh] w-[20vh] transition  hover:bg-fundo2"

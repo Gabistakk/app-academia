@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useDataUser } from "../../shared/context/DataUser";
 
 export default function Registro() {
     const [formaData, setFormdata] = useState({
@@ -7,6 +9,8 @@ export default function Registro() {
         senha: "",
         nome: "",
     });
+
+    const { dataUser, setDataUser } = useDataUser();
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -16,10 +20,12 @@ export default function Registro() {
         }));
     };
 
+    const navigator = useNavigate();
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:8000/user", {
+            const response = await fetch("http://10.112.240.187:8000/user", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -29,26 +35,27 @@ export default function Registro() {
 
             const responseData = await response.json();
             console.log(responseData);
+            setDataUser(responseData);
+            navigator("/Peso");
             setFormdata({
                 email: "",
                 senha: "",
                 nome: "",
             });
-
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     };
 
     return (
         <div className="w-[100%] h-[100vh] overflow-hidden bg-fundo2 flex justify-center items-center">
-            <div className="w-[40%] h-[80%] bg-fundo1 rounded-xl flex flex-col items-center justify-center">
+            <div className="w-[30%] h-[80%] bg-fundo1 rounded-xl flex flex-col items-center justify-center">
                 <div className="h-[20%] w-[100%] text-center flex items-center justify-center">
                     <h1 className="text-4xl text-white">Registro</h1>
                 </div>
                 <form
                     onSubmit={handleSubmit}
-                    className="h-[80%] w-[100%] flex flex-col   justify-center gap-24 items-center bg-fundo1 rounded-xl"
+                    className="h-[80%] w-[100%] flex flex-col   justify-center gap-20 items-center bg-fundo1 rounded-xl"
                 >
                     <div className="flex flex-col gap-2">
                         <div>
@@ -104,12 +111,14 @@ export default function Registro() {
                         </div>
                     </div>
 
-                    <button
-                        type="submit"
-                        className="border-fundo2 text-white rounded-full border-[1px] h-[4vh] w-[20vh] transition hover:text-white hover:bg-fundo2"
-                    >
-                        Registrar
-                    </button>
+                    <Link to={'/Login'}>
+                        <button
+                            type="submit"
+                            className="border-fundo2 text-white rounded-full border-[1px] h-[4vh] w-[20vh] transition hover:text-white hover:bg-fundo2"
+                        >
+                            Registrar
+                        </button>
+                    </Link>
                 </form>
             </div>
         </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export default function Metas() {
-   
+
   const navigator = useNavigate()
 
   const [buttoGanharFixed, setButtonGanharFixed] = useState(null);
@@ -17,11 +17,11 @@ export default function Metas() {
       ? setButtonPerderFixed(true)
       : setButtonPerderFixed(false);
 
-      navigator('/dietas')
+      navigator('/Peso')
   };
 
-  
-  
+
+
 
   return (
     <div className="w-[100%] h-[100vh] bg-fundo2 overflow-hidden flex justify-center items-center flex-col">

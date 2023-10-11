@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function App() {
   const [food2, setFood2] = useState("");
@@ -13,8 +14,8 @@ function App() {
 
   const handleAddFood = () => {
     if (food2.trim() !== "") {
-      setFoodsList([...foodsList, food2]); 
-      setFood2(""); 
+      setFoodsList([...foodsList, food2]);
+      setFood2("");
     }
   };
 
@@ -31,7 +32,7 @@ function App() {
           <h1 className="text-white text-3xl">Digite nomes de alimentos para sua dieta</h1>
         </section>
         <section className="input w-[100%] flex  justify-center items-center">
-          
+
           <div className="w-1/3">
             <input
               type="text"
@@ -41,7 +42,7 @@ function App() {
               onChange={handleFood2Change}
             />
           </div>
-         
+
         </section>
         <section className="botaSection ">
           <button
@@ -52,8 +53,8 @@ function App() {
             Adicionar
           </button>
 
-          
-          
+
+          <Link to={"/resultados"}>
           <button
             type="submit"
             className="text-white border-white rounded-full border-[1px] h-[4vh] w-[20vh] transition  hover:bg-fundo2"
@@ -61,6 +62,7 @@ function App() {
           >
             Proximo
           </button>
+          </Link>
         </section>
       </div>
     </div>

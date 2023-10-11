@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
 
@@ -8,7 +9,7 @@ export default function Login() {
         email : "",
         senha : "",
       })
-    
+
       const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormdata((data) => ({
@@ -65,12 +66,14 @@ export default function Login() {
               </div>
             </div>
 
+           <Link to={'/Meta'}>
             <button
             type="submit"
             className="border-fundo2 text-white rounded-full border-[1px] h-[4vh] w-[20vh] transition hover:text-white hover:bg-fundo2"
           >
             Logar
           </button>
+          </Link>
           </section>
         </form>
       </div>
