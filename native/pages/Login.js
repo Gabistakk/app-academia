@@ -2,9 +2,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import Home from '../Home/Home.js';
 
-
-export default function Login() {
+export default function Login({ navigation }) {
 
     return (
         <View style={styles.container}>
@@ -19,7 +19,7 @@ export default function Login() {
 
                 <Text style={styles.cadastro}>Não Possui Conta? Cadastre-se </Text>
 
-                <TouchableOpacity style={styles.appButtonContainer}>
+                <TouchableOpacity style={styles.appButtonContainer} onPress={() => { navigation.navigate('Home') }}>
                     <Text style={styles.appButtonText}>Entrar</Text>
                 </TouchableOpacity>
             </View>

@@ -6,16 +6,95 @@ import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'rea
 import Cadastro from './pages/Cadastro.js';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './pages/Login.js';
+import Home from './Home/Home.js';
+import Dietas from './pages/Dietas.js';
+import Exercicios from './pages/Exercicios.js';
+import Metas from './pages/Metas.js';
+import Resultados from './pages/Resultados.js';
 
-export default function Home() {
+export default function App() {
   const Stack = createStackNavigator();
 
   return (
     <NavigationContainer>
-    <Stack.Navigator>
-      <Stack.Screen name="Cadastro" component={Cadastro} />
-      <Stack.Screen name="Login" component={Login} />
-    </Stack.Navigator>
+      <Stack.Navigator screenOptions={{
+
+      }}>
+        <Stack.Screen name="Cadastro" component={Cadastro} options={{
+          title: 'Cadastro',
+          headerStyle: {
+            backgroundColor: '#25242c'
+          },
+          headerTitleStyle: {
+            color: 'white'
+          }
+        }} />
+        <Stack.Screen name="Login" component={Login} options={{
+          title: 'Login',
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#25242c'
+          },
+          headerTitleStyle: {
+            color: 'white'
+          }
+        }} />
+        <Stack.Screen name="Home" component={Home} options={{
+          title: 'Home',
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#25242c'
+          },
+          headerTitleStyle: {
+            color: 'white'
+          }
+        }} />
+
+        <Stack.Screen name="Dietas" component={Dietas} options={{
+          title: 'Dietas',
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#25242c'
+          },
+          headerTitleStyle: {
+            color: 'white'
+          }
+        }} />
+
+        <Stack.Screen name="Exercicios" component={Exercicios} options={{
+          title: 'Exercicios',
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#25242c'
+          },
+          headerTitleStyle: {
+            color: 'white'
+          }
+        }} />
+
+        <Stack.Screen name="Metas" component={Metas} options={{
+          title: 'Metas',
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#25242c'
+          },
+          headerTitleStyle: {
+            color: 'white'
+          }
+        }} />
+
+        <Stack.Screen name="Resultados" component={Resultados} options={{
+          title: 'Resultados',
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#25242c'
+          },
+          headerTitleStyle: {
+            color: 'white'
+          }
+        }} />
+
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

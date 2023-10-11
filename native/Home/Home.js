@@ -1,27 +1,45 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import HomeScreen from './pages/HomeScreen';
-import SettingsScreen from './pages/SettingsScreen';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import Metas from './pages/Metas';
-import Dietas from './pages/Dietas';
-import Exercicios from './pages/Exercicios';
-import Resultados from './pages/Resultados';
-export default function App() {
+import Metas from '../pages/Metas';
+import Dietas from '../pages/Dietas';
+import Exercicios from '../pages/Exercicios';
+import Resultados from '../pages/Resultados';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+
+export default function Home() {
   const Tab = createMaterialBottomTabNavigator();
   return (
-    <NavigationContainer style={styles.container}>
 
-        <Tab.Navigator >
-        <Tab.Screen name="Metas" component={Metas} />
-      <Tab.Screen name="Dietas" component={Dietas} />
-      <Tab.Screen name="Exercicios" component={Exercicios} />
-      <Tab.Screen name="Resultados" component={Resultados} />
+      <Tab.Navigator barStyle={{ backgroundColor : '#0d090a'}}>
+        <Tab.Screen name="Metas" component={Metas} options={{
+          tabBarLabel: 'Metas',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="arrow-up-bold-hexagon-outline" color={color} size={26} />
+          ),
+        }} />
+        <Tab.Screen name="Dietas" component={Dietas} options={{
+          tabBarLabel: 'Dietas',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="food-apple-outline" color={color} size={26} />
+          ),
+        }}  />
+        <Tab.Screen name="Exercicios" component={Exercicios} options={{
+          tabBarLabel: 'Exercicios',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="weight-lifter" color={color} size={26} />
+          ),
+        }}  />
+        <Tab.Screen name="Resultados" component={Resultados}options={{
+          tabBarLabel: 'Resultados',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="clipboard-check-multiple-outline" color={color} size={26} />
+          ),
+        }}  />
 
-        </Tab.Navigator>
-        </NavigationContainer>
+      </Tab.Navigator>
   );
 }
 
@@ -70,7 +88,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingVertical: 10,
     paddingHorizontal: 12,
-    width : 200,
+    width: 200,
   },
   appButtonText: {
     fontSize: 20,
