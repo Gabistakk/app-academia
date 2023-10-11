@@ -1,29 +1,43 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import MeuModal from '../components/MeuModal';
 
 
 export default function Metas() {
 
+    const [openModal,setOpenModal] = useState(false)
+
+
+    const handleOpenModal = ()=>{
+        setOpenModal(true)
+    }
+
     return (
         <View style={styles.container}>
 
-            <Text style={styles.text}>Criar Conta </Text>
+            <Text style={styles.text}> Informe o seu Peso atual: </Text>
 
             <View style={styles.agruparInputs}>
 
-                <TextInput style={styles.inputs} placeholderTextColor={'#e59638'} placeholder='Usuario' />
-                <TextInput style={styles.inputs} keyboardType="email-address" placeholderTextColor={'#e59638'} placeholder='Email' />
-                <TextInput style={styles.inputs} placeholder='Senha' placeholderTextColor={'#e59638'} secureTextEntry={true} />
-                <TextInput style={styles.inputs} keyboardType="number-pad" placeholder='Telefone' placeholderTextColor={'#e59638'} />
+                <TextInput style={styles.inputs} placeholderTextColor={'#e59638'} placeholder='Peso' />
+                
+                <Text style={styles.text}> Voce quer : </Text>
 
 
-
-                <TouchableOpacity style={styles.appButtonContainer}>
-                    <Text style={styles.appButtonText}>Cadastrar</Text>
+                <TouchableOpacity style={styles.appButtonContainer} onPress={handleOpenModal}>
+                    <Text style={styles.appButtonText} >Perder Peso</Text>
                 </TouchableOpacity>
-
+                <TouchableOpacity style={styles.appButtonContainer}>
+                    <Text style={styles.appButtonText}>Ganhar Peso</Text>
+                </TouchableOpacity>
+                 {
+                    openModal ? (<><MeuModal open={openModal}/></>) : (<></>)
+                 }
+                
+              
             </View>
         </View>
     );
