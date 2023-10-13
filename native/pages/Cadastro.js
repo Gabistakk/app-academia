@@ -21,8 +21,11 @@ export default function Cadastro({ navigation }) {
 
 
 
-                <TouchableOpacity onPress={() => { navigation.navigate('Login') }} style={styles.appButtonContainer}>
+                <TouchableOpacity onPress={() => { navigation.navigate('Cadastro') }} style={styles.appButtonContainer}>
                     <Text style={styles.appButtonText}>Cadastrar</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => { navigation.navigate('Login') }} style={styles.appButtonContainer}>
+                    <Text style={styles.appButtonText}>Login</Text>
                 </TouchableOpacity>
 
             </View>

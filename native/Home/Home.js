@@ -13,30 +13,31 @@ export default function Home() {
   const Tab = createMaterialBottomTabNavigator();
   return (
 
-      <Tab.Navigator barStyle={{ backgroundColor : '#0d090a'}}>
-        <Tab.Screen name="Metas" component={Metas} options={{
-          tabBarLabel: 'Metas',
+      <Tab.Navigator barStyle={{ backgroundColor : '#25242c'}} >
+        <Tab.Screen name="Metas" component={Metas}  options={{
+          tabBarLabel: 'Metas', 
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="arrow-up-bold-hexagon-outline" color={color} size={26} />
+            <MaterialCommunityIcons  name="arrow-up-bold-hexagon-outline" color='white'size={30}  />
           ),
         }} />
         <Tab.Screen name="Dietas" component={Dietas} options={{
           tabBarLabel: 'Dietas',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="food-apple-outline" color={color} size={26} />
+            <MaterialCommunityIcons name="food-apple-outline" color='white' size={30} />
           ),
         }}  />
         <Tab.Screen name="Exercicios" component={Exercicios} options={{
           tabBarLabel: 'Exercicios',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="weight-lifter" color={color} size={26} />
+            <MaterialCommunityIcons name="weight-lifter" color='white'size={30}/>
           ),
         }}  />
         <Tab.Screen name="Resultados" component={Resultados}options={{
           tabBarLabel: 'Resultados',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="clipboard-check-multiple-outline" color={color} size={26} />
+            <MaterialCommunityIcons name="clipboard-check-multiple-outline" color='white'size={30} />
           ),
+          
         }}  />
 
       </Tab.Navigator>

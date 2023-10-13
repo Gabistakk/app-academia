@@ -22,7 +22,7 @@ export default function Metas() {
 
             <View style={styles.agruparInputs}>
 
-                <TextInput style={styles.inputs} placeholderTextColor={'#e59638'} placeholder='Peso' />
+                <TextInput style={styles.inputs} placeholderTextColor={'#e59638'} placeholder='Digite aqui...' />
                 
                 <Text style={styles.text}> Voce quer : </Text>
 
@@ -77,8 +77,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         textAlign: 'center',
         width: '90%',
-        height: '60%',
-        gap: 30,
+        height: '45%',
         borderRadius: 10,
 
     }, appButtonContainer: {

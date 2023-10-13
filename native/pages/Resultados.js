@@ -2,48 +2,75 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-
+import { Calendar } from 'react-native-calendario';
 
 export default function Resultados() {
 
     return (
-        <View style={styles.container}>
-
-            <Text style={styles.text}>Criar Conta </Text>
-
-            <View style={styles.agruparInputs}>
-
-                <TextInput style={styles.inputs} placeholderTextColor={'#e59638'} placeholder='Usuario' />
-                <TextInput style={styles.inputs} keyboardType="email-address" placeholderTextColor={'#e59638'} placeholder='Email' />
-                <TextInput style={styles.inputs} placeholder='Senha' placeholderTextColor={'#e59638'} secureTextEntry={true} />
-                <TextInput style={styles.inputs} keyboardType="number-pad" placeholder='Telefone' placeholderTextColor={'#e59638'} />
-
-
-
-                <TouchableOpacity style={styles.appButtonContainer}>
-                    <Text style={styles.appButtonText}>Cadastrar</Text>
-                </TouchableOpacity>
-
-            </View>
+        <View >
+<Text style={styles.text}>Marcar resultados diarios</Text>
+<Calendar
+  onChange={(range) => console.log(range)}
+  style={{        width : 100  }}
+  minDate={new Date(2018, 3, 20)}
+  startDate={new Date(2018, 3, 30)}
+  endDate={new Date(2018, 4, 5)}
+  theme={{
+    activeDayColor: {},
+    monthTitleTextStyle: {
+      color: 'black',
+      fontWeight: '300',
+      fontSize: 16,
+    },
+    emptyMonthContainerStyle: {},
+    emptyMonthTextStyle: {
+      fontWeight: '200',
+    },
+    weekColumnsContainerStyle: {},
+    weekColumnStyle: {
+      paddingVertical: 10,
+    },
+    weekColumnTextStyle: {
+      color: 'black',
+      fontSize: 13,
+    },
+    nonTouchableDayContainerStyle: {},
+    nonTouchableDayTextStyle: {},
+    startDateContainerStyle: {},
+    endDateContainerStyle: {},
+    dayContainerStyle: {},
+    dayTextStyle: {
+      color: 'black',
+      fontWeight: '200',
+      fontSize: 15,
+    },
+    dayOutOfRangeContainerStyle: {},
+    dayOutOfRangeTextStyle: {},
+    todayContainerStyle: {},
+    todayTextStyle: {
+      color: 'black',
+    },
+    activeDayContainerStyle: {
+      backgroundColor: 'black',
+    },
+    activeDayTextStyle: {
+      color: 'black',
+    },
+    nonTouchableLastMonthDayTextStyle: {},
+  }}
+/>
         </View>
     );
 }
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#25242c',
-
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 40
-    },
+    
     text: {
         color: '#D8DBE2',
         fontSize: 30,
 
     },
     cadastro: {
-        color: '#e59638',
+        color: 'black',
         fontSize: 20,
     },
     inputs: {

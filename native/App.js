@@ -93,6 +93,7 @@ export default function App() {
             color: 'white'
           }
         }} />
+        
 
       </Stack.Navigator>
     </NavigationContainer>

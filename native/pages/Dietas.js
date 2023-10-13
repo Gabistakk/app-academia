@@ -9,18 +9,18 @@ export default function Dietas() {
     return (
         <View style={styles.container}>
 
-            <Text style={styles.text}>Bem-Vindo a Academia </Text>
+            <Text style={styles.text}>Digite alimentos para dieta</Text>
 
             <View style={styles.agruparInputs}>
 
-                <TextInput style={styles.inputs} keyboardType="email-address" placeholderTextColor={'#e59638'} placeholder='Email' />
-                <TextInput style={styles.inputs} placeholder='Senha' placeholderTextColor={'#e59638'} secureTextEntry={true} />
-                <TextInput style={styles.inputs} placeholder='Confirmar Senha' placeholderTextColor={'#e59638'} secureTextEntry={true} />
-
-                <Text style={styles.cadastro}>Não Possui Conta? Cadastre-se </Text>
-
+                <TextInput style={styles.inputs} placeholderTextColor={'#e59638'} placeholder='Digite aqui....' />
+                
                 <TouchableOpacity style={styles.appButtonContainer}>
-                    <Text style={styles.appButtonText}>Entrar</Text>
+                    <Text style={styles.appButtonText}>Adicionar mais</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.appButtonContainer}>
+                    <Text style={styles.appButtonText}>Finalizar</Text>
+                    
                 </TouchableOpacity>
             </View>
         </View>
@@ -60,8 +60,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         textAlign: 'center',
         width: '90%',
-        height: '60%',
-        gap: 30,
+        height: '40%',
         borderRadius: 10,
 
     }, appButtonContainer: {

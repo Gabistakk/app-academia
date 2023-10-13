@@ -17,7 +17,6 @@ export default function Login({ navigation }) {
                 <TextInput style={styles.inputs} placeholder='Senha' placeholderTextColor={'#e59638'} secureTextEntry={true} />
                 <TextInput style={styles.inputs} placeholder='Confirmar Senha' placeholderTextColor={'#e59638'} secureTextEntry={true} />
 
-                <Text style={styles.cadastro}>Não Possui Conta? Cadastre-se </Text>
 
                 <TouchableOpacity style={styles.appButtonContainer} onPress={() => { navigation.navigate('Home') }}>
                     <Text style={styles.appButtonText}>Entrar</Text>

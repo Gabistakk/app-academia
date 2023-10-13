@@ -9,16 +9,13 @@ export default function Exercicios() {
     return (
         <View style={styles.container}>
 
-            <Text style={styles.text}>Criar Conta </Text>
+            <Text style={styles.text}>Digite seu peso pós-dieta </Text>
+
 
             <View style={styles.agruparInputs}>
 
-                <TextInput style={styles.inputs} placeholderTextColor={'#e59638'} placeholder='Usuario' />
-                <TextInput style={styles.inputs} keyboardType="email-address" placeholderTextColor={'#e59638'} placeholder='Email' />
-                <TextInput style={styles.inputs} placeholder='Senha' placeholderTextColor={'#e59638'} secureTextEntry={true} />
-                <TextInput style={styles.inputs} keyboardType="number-pad" placeholder='Telefone' placeholderTextColor={'#e59638'} />
-
-
+                <TextInput style={styles.inputs} placeholderTextColor={'#e59638'} placeholder='Digite aqui...' />
+                <Text style={styles.sub} >Com base na dieta e peso indicaremos uma sequencia de exercicios</Text>
 
                 <TouchableOpacity style={styles.appButtonContainer}>
                     <Text style={styles.appButtonText}>Cadastrar</Text>
@@ -35,11 +32,15 @@ const styles = StyleSheet.create({
 
         alignItems: 'center',
         justifyContent: 'center',
-        gap: 40
     },
     text: {
         color: '#D8DBE2',
         fontSize: 30,
+
+    },
+    sub: {
+        color: '#D8DBE2',
+        fontSize: 15,
 
     },
     cadastro: {
@@ -62,9 +63,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
         textAlign: 'center',
-        width: '90%',
-        height: '60%',
-        gap: 30,
+        width: '80%',
+        height: '50%',
         borderRadius: 10,
 
     }, appButtonContainer: {
